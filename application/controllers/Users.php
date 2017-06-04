@@ -10,9 +10,9 @@
 			$this->form_validation->set_rules('password2', 'Confirm Password','matches[password]');
 
 			if($this->form_validation->run() === FALSE){
-				$this->load->view('templates/header');
+				$this->load->view('templates/header_login_register');
 				$this->load->view('users/register', $data);
-				$this->load->view('templates/footer');
+				$this->load->view('templates/footer_login_register');
 
 			} else {
 				// Encrypt passoword
@@ -23,7 +23,7 @@
 				//set message
 				$this->session->set_flashdata('user_registered', 'Sunteti inregistrat');
 
-				redirect('posts');
+				redirect('home');
 
 			}
 
@@ -37,9 +37,9 @@
 			$this->form_validation->set_rules('password', 'Password','required');
 
 			if($this->form_validation->run() === FALSE){
-				$this->load->view('templates/header');
+				$this->load->view('templates/header_login_register');
 				$this->load->view('users/login', $data);
-				$this->load->view('templates/footer');
+				$this->load->view('templates/footer_login_register');
 
 			} else {
 				//get username
@@ -64,7 +64,7 @@
 					//set message
 				$this->session->set_flashdata('user_loggedin', 'Sunteti logat');
 
-				redirect('posts');
+				redirect('home');
 
 				}
 				else {

@@ -70,16 +70,8 @@
 </head>
 <body>
     <div class="topnav" id="myTopnav" class="text center">
-      <?php if($this->session->userdata('logged_in')) : ?>
-        <a href="<?php echo base_url();?>">Acasa</a></li>
-        <a href="<?php echo base_url();?>about">Despre noi</a>
-        <a href="<?php echo base_url();?>posts">Cutremure</a>
-        <a href="<?php echo base_url();?>posts/create">Create post</a>
-        <a style="float: right;" href="<?php echo base_url();?>users/logout">Log out</a><
-    <?php endif; ?>
-
     <?php if(!$this->session->userdata('logged_in')) : ?>
-        <a href="<?php echo base_url();?>users/login" >Login</a>
+        <a style="text-align: center" href="<?php echo base_url();?>users/login" style="float: center;">Login</a>
         <a href="<?php echo base_url();?>users/register">Register</a>
     <?php endif; ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
