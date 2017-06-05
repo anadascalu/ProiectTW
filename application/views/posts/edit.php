@@ -4,14 +4,14 @@
 
 <?php echo validation_errors(); ?>
 <?php echo form_open('posts/update'); ?>
-<input type="hidden" name="IDCUTREMUR" value="<?php echo $post['IDCUTREMUR']; ?>">
+<input type="hidden" name="idCutremur" value="<?php echo $post['idCutremur']; ?>">
   <div class="form-group">
     <label>Title</label>
-    <input type="text" class="form-control" name="IDCUTREMUR" placeholder="Add Title" value="<?php echo $post['IDCUTREMUR']; ?>">
+    <input type="text" class="form-control" name="idCutremur" placeholder="Add Title" value="<?php echo $post['idCutremur']; ?>">
   </div>
   <div class="form-group">
     <label>Body</label>
-    <textarea type="text" class="form-control" name="MAGNITUDINE" placeholder="Add body" value="<?php echo $post['MAGNITUDINE']; ?>"></textarea>
+    <textarea type="text" class="form-control" name="magnitudine" placeholder="Add body" value="<?php echo $post['magnitudine']; ?>"></textarea>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
