@@ -21,9 +21,9 @@ a.pagination-link{
 </head>
 
 <?php foreach($posts as $post) : ?>
-	<?php echo $post['IDCUTREMUR']; ?>
+	<?php echo $post['idCutremur']; ?>
 
-	<p> <a class="btn btn-default" href="<?php echo site_url('/posts/'.$post['IDCUTREMUR']); ?>"> Read</a></p><br>
+	<p> <a class="btn btn-default" href="<?php echo site_url('/posts/'.$post['idCutremur']); ?>"> Read</a></p><br>
 	
 <?php endforeach; ?>
 <body>
