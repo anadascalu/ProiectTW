@@ -12,41 +12,41 @@ class Post_model extends CI_Model{
 
 		if($IDCUTREMUR === FALSE)
 		{
-			$this->db->order_by('IDCUTREMUR');
+			$this->db->order_by('idCutremur');
 			$query = $this->db->get('cutremur');
 			return $query->result_array();
 		}
 
-		$query = $this->db->get_where('cutremur', array('IDCUTREMUR' => $IDCUTREMUR));
+		$query = $this->db->get_where('cutremur', array('idCutremur' => $IDCUTREMUR));
 		return $query->row_array();
 	}
 
 	public function create_post(){
-		$slug = url_title($this->input->post('IDCUTREMUR'));
+		$slug = url_title($this->input->post('idCutremur'));
 
 		$data = array(
-		              'IDCUTREMUR' => $slug,	
-		              'MAGNITUDINE' => $this->input->post('MAGNITUDINE')
+		              'idCutremur' => $slug,	
+		              'magnitudine' => $this->input->post('magnitudine')
 		              );
 
 		return $this->db->insert('cutremur', $data);
 	}
 
 	public function delete_post($IDCUTREMUR){
-		$this->db->where('IDCUTREMUR', $IDCUTREMUR);
+		$this->db->where('idCutremur', $IDCUTREMUR);
 		$this->db->delete('cutremur');
 		return true;
 	}
 
 	public function update_post(){
 
-		$slug = url_title($this->input->post('IDCUTREMUR'));
+		$slug = url_title($this->input->post('idCutremur'));
 
 		$data = array(
-		              'IDCUTREMUR' => $slug,	
-		              'MAGNITUDINE' => $this->input->post('MAGNITUDINE')
+		              'idCutremur' => $slug,	
+		              'magnitudine' => $this->input->post('magnitudine')
 		              );
-		$this->db->where('IDCUTREMUR', $this->input->post('IDCUTREMUR'));
+		$this->db->where('idCutremur', $this->input->post('idCutremur'));
 		return $this->db->update('cutremur', $data);
 	}
 
@@ -58,4 +58,11 @@ class Post_model extends CI_Model{
 		return $query->row_array();
 	}
 
+	function get_search() {
+
+		$match = $this->input->post('search');
+		$this->db->where('idCutremur',$match);
+		$query = $this->db->get('cutremur');
+		return $query->result();
+	}
 }

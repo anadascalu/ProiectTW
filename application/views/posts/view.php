@@ -49,7 +49,7 @@
 </div>
 
    <hr>
-   <a class="btn btn-default" href="posts/edit/<?php echo $post['idCutremur']; ?>"> EDIT</a>
+   <a class="btn btn-default" href="edit/<?php echo $post['idCutremur']; ?>"> EDIT</a>
    <?php echo form_open('/posts/delete/'.$post['idCutremur']); ?>
    <input type="submit" value="Delete" class="btn btn-danger">
 </form>
