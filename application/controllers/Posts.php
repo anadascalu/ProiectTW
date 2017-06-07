@@ -82,7 +82,7 @@ class Posts extends CI_Controller{
 		else {
 			$this->post_model->delete_post($IDCUTREMUR);
 
-			$this->sessions->set_flashdata('post_deleted', 'Ai sters');
+			$this->session->set_flashdata('post_deleted', 'Ai sters');
 
 			redirect('posts');
 		}
@@ -118,43 +118,16 @@ class Posts extends CI_Controller{
 		else {
 			$this->post_model->update_post();
 
-			$this->sessions->set_flashdata('post_updated', 'Ai updatat');
+			$this->session->set_flashdata('post_updated', 'Ai updatat');
 
 			redirect('posts');
 		}
 	}
 
-	public function getdata_chart($idcutremur){
-		$data = $this->Our_chart_model->get_data_for_chart($idcutremur); 
-
-       //data to json 
-
-		$responce->cols[] = array( 
-		                          "id" => "", 
-		                          "label" => "Topping", 
-		                          "pattern" => "", 
-		                          "type" => "string" 
-		                          ); 
-		$responce->cols[] = array( 
-		                          "id" => "", 
-		                          "label" => "Total", 
-		                          "pattern" => "", 
-		                          "type" => "number" 
-		                          ); 
-		foreach($data as $cd) 
-		{ 
-			$responce->rows[]["c"] = array( 
-			                               array( 
-			                                     "v" => "$cd->idpersoana", 
-			                                     "f" => null 
-			                                     ) , 
-			                               array( 
-			                                     "v" => (int)$cd->idpersoana, 
-			                                     "f" => null 
-			                                     ) 
-			                               ); 
-		} 
-
-		echo json_encode($responce);  
+	public function search()
+	{
+		$data['query'] = $this->post_model->get_search();
+		$this->load->view('posts/edit', $data);
 	}
+
 }
