@@ -27,12 +27,12 @@
         <a href="<?php echo base_url();?>posts/index">Cutremure</a>
         <a href="<?php echo base_url();?>posts/create">Inscrieri</a>
          <a href="<?php echo base_url();?>search/index">Cauta</a>
-        <a style="float: right;" href="<?php echo base_url();?>users/logout">Delogare</a><
+        <a style="float: right;" href="<?php echo base_url();?>login/logout">Delogare</a><
     <?php endif; ?>
 
     <?php if(!$this->session->userdata('logged_in')) : ?>
-        <a href="<?php echo base_url();?>users/login" >Autentificare</a>
-        <a href="<?php echo base_url();?>users/register">Inregistrare</a>
+        <a href="<?php echo base_url();?>login/login" >Autentificare</a>
+        <a href="<?php echo base_url();?>register/register">Inregistrare</a>
     <?php endif; ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
