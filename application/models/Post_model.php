@@ -5,19 +5,19 @@ class Post_model extends CI_Model{
 		parent::__construct();
 	}
 
-	public function get_posts($IDCUTREMUR = FALSE, $limit = FALSE, $offset = FALSE){
+	public function get_posts($oras = FALSE, $limit = FALSE, $offset = FALSE){
 		if($limit){
 			$this->db->limit($limit, $offset);
 		}
 
-		if($IDCUTREMUR === FALSE)
+		if($oras === FALSE)
 		{
 			$this->db->order_by('idCutremur');
 			$query = $this->db->get('cutremur');
 			return $query->result_array();
 		}
 
-		$query = $this->db->get_where('cutremur', array('idCutremur' => $IDCUTREMUR));
+		$query = $this->db->get_where('cutremur', array('oras' => $oras));
 		return $query->row_array();
 	}
 

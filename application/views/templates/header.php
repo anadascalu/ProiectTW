@@ -25,14 +25,14 @@
         <a href="<?php echo base_url();?>">Acasa</a></li>
         <a href="<?php echo base_url();?>about">Despre noi</a>
         <a href="<?php echo base_url();?>posts/index">Cutremure</a>
-        <a href="<?php echo base_url();?>posts/create">Create post</a>
-         <a href="<?php echo base_url();?>search/index">Search</a>
-        <a style="float: right;" href="<?php echo base_url();?>users/logout">Log out</a><
+        <a href="<?php echo base_url();?>posts/create">Inscrieri</a>
+         <a href="<?php echo base_url();?>search/index">Cauta</a>
+        <a style="float: right;" href="<?php echo base_url();?>users/logout">Delogare</a><
     <?php endif; ?>
 
     <?php if(!$this->session->userdata('logged_in')) : ?>
-        <a href="<?php echo base_url();?>users/login" >Login</a>
-        <a href="<?php echo base_url();?>users/register">Register</a>
+        <a href="<?php echo base_url();?>users/login" >Autentificare</a>
+        <a href="<?php echo base_url();?>users/register">Inregistrare</a>
     <?php endif; ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
