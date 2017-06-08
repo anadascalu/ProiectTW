@@ -7,15 +7,14 @@
 <body>
 <div class="bg">
 <center>
-<h1 red><strong>Nu stiti de ce persoana draga nu va raspunde la telefon?</strong></h1>
-<h2>Sunteti ingrijorat?</h2>
-<h3>Doriti sa aflati daca totul este ok?</h3>
-<h1 style="color: red;"><strong>Aflati acum! Cautati-va persoana draga!</strong></h1>
+<h3><strong>Nu stiti de ce persoana draga nu va raspunde la telefon?</strong></h3>
+<h3>Sunteti ingrijorat?</h3>
+<h5>Doriti sa aflati daca totul este ok?</h5>
+<h2 style="color: red;"><strong>Aflati acum! Cautati-va persoana draga!</strong></h2>
 </center>
-
 <form action="<?php echo site_url('search/search');?>" method = "post">
 <div class="wrapper">
-<br><input type="text" name = "nume" placeholder="Nume" />
+<input type="text" name = "nume" placeholder="Nume" />
 <br>
 <br><input type="text" name= "prenume" placeholder="Prenume" />
 <br>
@@ -25,4 +24,14 @@
 </div>
 </form>
 </div>
+<center>
+<h1><strong>Pentru a descarca o lista, apasati unul din butoane:</strong></h1>
+<br><br>
+<a href="<?php echo base_url('export/csv_morti') ?>" class="btn btn-danger btn-lg">Lista morti</a>
+
+<a href="<?php echo base_url('export/csv_raniti') ?>" class="btn btn-danger btn-lg">Lista raniti</a>
+
+<a href="<?php echo base_url('export/csv_nevatamati') ?>" class="btn btn-danger btn-lg">Lista nevatamati</a>
+<br><br><br><br>
+</center>
 </body>

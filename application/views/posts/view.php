@@ -37,7 +37,7 @@
       google.visualization.events.addListener(chart, 'ready', function () {
         chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
         console.log(chart_div.innerHTML);
-         document.getElementById('png').outerHTML = '<a href="' + chart.getImageURI() + '">Descarcati diagrama</a>';
+         document.getElementById('png').outerHTML = '<a href="' + chart.getImageURI() + '">Vizualizati diagrama</a>';
       });
 
       chart.draw(data, options);
