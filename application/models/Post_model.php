@@ -22,14 +22,20 @@ class Post_model extends CI_Model{
 	}
 
 	public function create_post(){
-		$slug = url_title($this->input->post('idCutremur'));
 
 		$data = array(
-		              'idCutremur' => $slug,	
-		              'magnitudine' => $this->input->post('magnitudine')
+		              'idCutremur' => $this->input->post('idCutremur'),	
+		              'idPersoana' => $this->input->post('idPersoana'),	
+		              'nume' => $this->input->post('nume'),	
+		              'prenume' => $this->input->post('prenume'),
+		               'about' => $this->input->post('about'),
+		               'studii' => $this->input->post('studii'),
+		               'varsta' => $this->input->post('varsta'),
+		               'taraOrigine' => $this->input->post('taraOrigine'),
+		               'nrTelefon' => $this->input->post('nrTelefon'),
 		              );
 
-		return $this->db->insert('cutremur', $data);
+		return $this->db->insert('voluntari', $data);
 	}
 
 	public function delete_post($IDCUTREMUR){

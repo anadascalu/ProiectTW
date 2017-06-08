@@ -1,0 +1,14 @@
+.img{
+	   background-color: #555;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+   .bckgr {
+    background-image: url("../img/charity.jpg");
+    height: auto;
+    width: auto; 
+    background-position: 99% 5%;
+    background-repeat: no-repeat;
+}

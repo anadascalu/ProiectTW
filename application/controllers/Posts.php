@@ -55,9 +55,16 @@ class Posts extends CI_Controller{
 
 			$data['title'] = 'Create Post';
 
-			$this->form_validation->set_rules('IDCUTREMUR', 'ID', 'required');
-			$this->form_validation->set_rules('MAGNITUDINE', 'MAGNITUDINE', 'required');
-
+			$this->form_validation->set_rules('idCutremur', 'idCutremur', 'required');
+			$this->form_validation->set_rules('idPersoana', 'idPersoana', 'required');
+			$this->form_validation->set_rules('nume', 'nume', 'required');
+			$this->form_validation->set_rules('prenume', 'prenume', 'required');
+			$this->form_validation->set_rules('about', 'about', 'required');
+			$this->form_validation->set_rules('studii', 'studii', 'required');
+			$this->form_validation->set_rules('varsta', 'varsta', 'required');
+			$this->form_validation->set_rules('taraOrigine', 'taraOrigine', 'required');
+			$this->form_validation->set_rules('nrTelefon', 'nrTelefon', 'required');
+			
 			if($this->form_validation->run() == FAlSE){
 
 				$this->load->view('templates/header');
