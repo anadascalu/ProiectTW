@@ -105,7 +105,7 @@
                         <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <h4>
-                                    Fa parte din
+                                     Fă parte din
                                     <br>echipa noastra!</h4>
                             </div>
                         </li>

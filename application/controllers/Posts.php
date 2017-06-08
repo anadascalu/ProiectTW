@@ -53,7 +53,7 @@ class Posts extends CI_Controller{
 		}
 		else {
 
-			$data['title'] = 'Create Post';
+			$data['title'] = 'Inscriere voluntari';
 
 			$this->form_validation->set_rules('idCutremur', 'idCutremur', 'required');
 			$this->form_validation->set_rules('idPersoana', 'idPersoana', 'required');
