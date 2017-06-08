@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head>
- <!--link the bootstrap css file-->
- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
- <style type="text/css">
-   .colbox {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-</style>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type = "text/css" href ="http://localhost/TW/css/login_style.css">
+
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 </head>
 <body>
-  <?php echo validation_errors(); ?>
+  <div class="container" >
+
+    <header>
+      <h1>Inregistreaza-te pentru a afla mai multe detalii despre echipa NEDa!</h1>
+
+    </header>
+   <?php echo validation_errors(); ?>
   <?php $attributes = array("name" => "registrationform");  echo form_open("register/register", $attributes);?>
-
-  <div class="container">
-    <div class="row colbox">
-      <div class="col-lg-4 col-sm-4 well">
-        <legend>User Registration Form</legend>
-        <div class="panel-body">
-
-          <div class="form-group">
-            <label> Name </label>
-            <input class="form-control" name="name" placeholder="Name" type="text" />
-          </div>
-
-        <div class="form-group">
-          <label>Username</label>
-          <input class="form-control" name="username" placeholder="Username" type="text" />
+    <section>       
+      <div id="container_demo" >
+      <div id="wrapper">
+          <div id="login" class="animate form">
+            <form  action="mysuperscript.php" autocomplete="on"> > 
+            <h1> Inregistrare </h1> 
+            <p> 
+                <label for="name" class="name" > Nume </label>
+                <input id="name" name="name" required="required" type="text" placeholder="Numex "/>
+              </p>
+            <p> 
+              <label for="usernamesignup" class="uname" >Username</label>
+              <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="username" />
+            </p>
+            <p> 
+              <label for="emailsignup" class="youmail"  >Email</label>
+              <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="email@mail.com"/> 
+            </p>
+            <p> 
+              <label for="passwordsignup" class="youpasswd" >Parola </label>
+              <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+            </p>
+            <p> 
+              <label for="passwordsignup_confirm" class="youpasswd" >Te rog sa confirmi parola </label>
+              <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+            </p>
+            <p class="signin button"> 
+              <input type="submit" value="Inregistreaza-te"/> 
+            </p>
+            <p class="change_link">  
+              Deja membru ?
+              <a href="http://localhost/TW/login/login" class="to_register"> Autentifica-te! </a>
+            </p>
+          </form>
         </div>
-
-        <div class="form-group">
-          <label >Email ID</label>
-          <input class="form-control" name="email" placeholder="Email-ID" type="text" />
-        </div>
-
-        <div class="form-group">
-          <label >Password</label>
-          <input class="form-control" name="password" placeholder="Password" type="password" />
-        </div>
-
-        <div class="form-group">
-          <label >Confirm Password</label>
-          <input class="form-control" name="password2" placeholder="Confirm Password" type="password" />
-        </div>
-
-        <div class="form-group">
-          <button  type="submit" class="btn btn-primary btn-block">Signup</button>
-        </div>
-
 
       </div>
-    </div>
-  </div>
+    </div>  
+  </section>
 </div>
-</div>
-<?php echo form_close(); ?>
-
 </body>
 </html>
