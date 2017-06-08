@@ -1,37 +1,63 @@
 .wrapper {
- padding: 90px 200px 100px 500px;
- width: auto;  
+	padding: 90px 200px 100px 500px;
+	width: auto;  
 } 
 .bg {
- background-image: url("../img/header.jpg");
- height: auto;
- width: auto; 
- background-position: 38% 70%;
- background-repeat: no-repeat;
+	background-image: url("../img/header.jpg");
+	height: auto;
+	width: auto; 
+	background-position: 38% 70%;
+	background-repeat: no-repeat;
 } 
 
 input[type=text] {
- width: 150px;
- box-sizing: border-box;
- border: 2px solid #ccc;
- border-radius: 4px;
- font-size: 16px;
- background-color: white;
- background-image: url('searchicon.png');
- background-position: 10px 10px; 
- background-repeat: no-repeat;
- padding: 12px 20px 12px 40px;
- shape-inside: polygon(0 0,  250px 0, 150px 100px, 80px 100px);
- shape-padding: 20px;
- transition: all 2s ease; 
- -webkit-clip-path: polygon(0 0,  250px 0, 150px 100px, 80px 100px);;;
+	width: 150px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('searchicon.png');
+	background-position: 10px 10px; 
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	shape-inside: polygon(0 0,  250px 0, 150px 100px, 80px 100px);
+	shape-padding: 20px;
+	transition: all 2s ease; 
+	-webkit-clip-path: polygon(0 0,  250px 0, 150px 100px, 80px 100px);;;
 }
 
 input[type=text]:focus {
- width: 100%;
+	width: 100%;
 }
 
 input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
- cursor:pointer;
- -webkit-border-radius: 5px;
- border-radius: 5px; }
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px; }
+
+.pagination-links{
+  margin: 30px 0;
+}
+
+.pagination-links strong{
+  padding: 8px 13px;
+  margin: 5px;
+  background: #f4f4f4;
+  border: 1px #ccc solid;
+}
+
+a.pagination-link{
+  padding: 8px 13px;
+  margin: 5px;
+  background: #f4f4f4;
+  border: 1px #ccc solid;
+}
+#export_charts {
+  display: inline-block;
+  height: 25px;
+  font-size: 13px;
+  margin-left: -85%;
+  margin-top: 1%;
+  cursor: pointer;
+}
