@@ -1,12 +1,37 @@
+.wrapper {
+ padding: 90px 200px 100px 500px;
+ width: auto;  
+} 
+.bg {
+ background-image: url("../img/header.jpg");
+ height: auto;
+ width: auto; 
+ background-position: 38% 70%;
+ background-repeat: no-repeat;
+} 
 
-.chart-container {
-	width:  80%;
-	height: 480px;
-	margin: 0 auto;
+input[type=text] {
+ width: 150px;
+ box-sizing: border-box;
+ border: 2px solid #ccc;
+ border-radius: 4px;
+ font-size: 16px;
+ background-color: white;
+ background-image: url('searchicon.png');
+ background-position: 10px 10px; 
+ background-repeat: no-repeat;
+ padding: 12px 20px 12px 40px;
+ shape-inside: polygon(0 0,  250px 0, 150px 100px, 80px 100px);
+ shape-padding: 20px;
+ transition: all 2s ease; 
+ -webkit-clip-path: polygon(0 0,  250px 0, 150px 100px, 80px 100px);;;
 }
 
-.pie-chart-container {
-	width : 360px;
-	height : 360px;
-	float : left;
+input[type=text]:focus {
+ width: 100%;
 }
+
+input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
+ cursor:pointer;
+ -webkit-border-radius: 5px;
+ border-radius: 5px; }

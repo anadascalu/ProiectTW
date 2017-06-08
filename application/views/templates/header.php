@@ -24,7 +24,7 @@
       <?php if($this->session->userdata('logged_in')) : ?>
         <a href="<?php echo base_url();?>">Acasa</a></li>
         <a href="<?php echo base_url();?>about">Despre noi</a>
-        <a href="<?php echo base_url();?>posts">Cutremure</a>
+        <a href="<?php echo base_url();?>posts/index">Cutremure</a>
         <a href="<?php echo base_url();?>posts/create">Create post</a>
          <a href="<?php echo base_url();?>search/index">Search</a>
         <a style="float: right;" href="<?php echo base_url();?>users/logout">Log out</a><
