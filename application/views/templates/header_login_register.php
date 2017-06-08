@@ -71,8 +71,8 @@
 <body>
     <div class="topnav" id="myTopnav" class="text center">
     <?php if(!$this->session->userdata('logged_in')) : ?>
-        <a style="text-align: center" href="<?php echo base_url();?>users/login" style="float: center;">Autentificare</a>
-        <a href="<?php echo base_url();?>users/register">Inregistrare</a>
+        <a style="text-align: center" href="<?php echo base_url();?>login/login" style="float: center;">Autentificare</a>
+        <a href="<?php echo base_url();?>register/register">Inregistrare</a>
     <?php endif; ?>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
