@@ -140,7 +140,8 @@
  	<div class="container text-center">
  		<div class="call-to-action">
  			<h2>PENTRU ORICE PROBLEME, CONTACTEAZA-NE!</h2>
- 			<a class="btn btn-default btn-xl sr-button">Contact!</a>
+ 			<a class="btn btn-default btn-xl sr-button" href="http://localhost/TW/about" >Contact!</a>
+
  		</div>
  	</div>
  </aside>
