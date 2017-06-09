@@ -1,16 +1,95 @@
-<h2>
-<?= $title; ?>
-</h2>
 <head>
+  <link rel = "stylesheet"  href = "http://localhost/TW/css/inscrieri.css" type = "text/css" >
 
-<link rel = "stylesheet" type = "text/css" 
-         href = "<?php echo base_url(); ?>css/inscrieri.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link href="<?php echo base_url(); ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Plugin CSS -->
+  <link href="<?php echo base_url(); ?>/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+  <!-- Theme CSS -->
+  <link href="<?php echo base_url(); ?>/css/creative.min.css" rel="stylesheet" type="text/css">
+
+
 </head>
 
 <?php echo validation_errors(); ?>
 <?php echo form_open('posts/create'); ?>
-<div class="bckgr">
-<div class="form-group">
+
+<body>
+
+
+  <form>
+    <h1>Inscrie-te ca voluntar in orasul tau. Multumim, echipa NEDa! <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i></h1>
+
+    <div class="contentform">
+      <div id="sendmessage"> Ai fost inscris cu succes. Va multumim! </div>
+
+
+      <div class="leftcontact">
+        <div class="form-group">
+        <p>Numar voluntar<span>*</span></p>
+          <span class="icon-case"><i class="fa fa-id-card-o fa-fw" ></i></span>
+          <input type="text" name="idPersoana" placeholder="exemplu: V600"/>
+          <div class="validation"></div>
+        </div> 
+
+        <div class="form-group">
+          <p>Nume <span>*</span></p>
+          <span class="icon-case"><i class="fa fa-user fa-fw"></i></span>
+          <input type="text" name="nume" placeholder="Nume" />
+          <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
+          <p>Prenume<span>*</span></p>  
+          <span class="icon-case"><i class="fa fa-user fa-fw"></i></span>
+          <input type="text" name="prenume"  placeholder="Prenume" />
+          <div class="validation"></div>
+        </div>  
+
+        <div class="form-group">
+          <p>Despre <span>*</span></p>
+          <span class="icon-case"><i class="fa fa-info fa-fw"></i></span>
+          <textarea type="text" rows = "14" name="about"  placeholder="Cateva cuvinte despre tine" />
+          </textarea>
+          <div class="validation"></div>
+        </div>
+
+      </div>
+
+      <div class="rightcontact">  
+
+        <div class="form-group">
+          <p>Ocupatie <span>*</span></p>
+          <span class="icon-case"><i class="fa fa-building-o fa-fw"></i></span>
+          <input type="text" name="studii" placeholder="Student/Loc de munca"/>
+          <div class="validation"></div>
+        </div>  
+
+        <div class="form-group">
+          <p>Varsta <span>*</span></p>  
+          <span class="icon-case"><i class="fa fa-question fa-fw"></i></span>
+          <input type="text" name="varsta" placeholder="Varsta dvs."/>
+          <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
+          <p>Tara de origine <span>*</span></p>
+          <span class="icon-case"><i class="fa fa-globe fa-fw"></i></span>
+          <input type="text" name="taraOrigine" placeholder="exemplu: Romania"/>
+          <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
+          <p>Numar de telefon <span>*</span></p> 
+          <span class="icon-case"><i class="fa fa-phone fa-fw"></i></span>
+          <input type="text" size = "10" name="nrTelefon" placeholder="exemplu: 0755110000"/>
+          <div class="validation"></div>
+        </div>
+
+        <div class="form-group">
+          
 <label>Oras</label>
 <br>
 <select name="idCutremur" >
@@ -26,46 +105,13 @@
 <option value="C7">Itahari2</option>
 <option value="C8">Pithoragarh</option>
 <option value="C9">Kathmandu3</option>
-</select></div>    
-
-  <div class="form-group">
-    <label>Numar voluntar</label>
-    <input type="text" class="form-control" name="idPersoana" placeholder="exemplu: V600" style="width: 300px;">
-  </div>
-  <div class="form-group">
-    <label>Nume</label>
-    <input type="text" class="form-control" name="nume" placeholder="Nume" style="width: 300px;">
-  </div>
-  <div class="form-group">
-    <label>Prenume</label>
-    <input type="text" class="form-control" name="prenume" placeholder="Prenume" style="width: 300px;">
-  </div>
-
-  <div class="form-group">
-    <label>Despre</label>
-    <textarea type="text" class="form-control" name="about" placeholder="Cateva cuvinte despre tine" style="width: 300px;"></textarea>
-  </div>
-  <div class="form-group">
-    <label>Ocupatia</label>
-    <input type="text" class="form-control" name="studii" placeholder="Student/Loc de munca" style="width: 300px;">
-  </div>
-  <div class="form-group">
-    <label>Varsta</label>
-    <input type="text" class="form-control" name="varsta" placeholder="Varsta dvs." style="width: 300px;">
-  </div>
-
-<div class="form-group">
-    <label>Tara de Origine</label>
-    <input type="text" class="form-control" name="taraOrigine" placeholder="exemplu: Romania" style="width: 300px;">
-  </div>
-
-<div class="form-group">
-    <label>Numarul de telefon</label>
-    <input size="10" type="text" class="form-control" name="nrTelefon" placeholder="exemplu: 0755110000" style="width: 300px;">
-  </div>
-
-
-  <button type="submit" class="btn btn-default" class="img">Inscrie-te</button>
+</select></div>  
+        </div>  
     </div>
-</form>
-<?php form_close(); ?>
+    <button type="submit" class="bouton-contact">Trimite</button>
+
+  </form> 
+
+  <?php form_close(); ?>
+</body>
+</html>
