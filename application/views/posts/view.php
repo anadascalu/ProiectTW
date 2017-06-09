@@ -79,9 +79,9 @@
 </div>
 
 <hr>
-<a class="btn btn-default" href="edit/<?php echo $post['oras']; ?>"> EDIT</a>
+<a class="btn btn-default" href="edit/<?php echo $post['oras']; ?>">Modifica</a>
 <?php echo form_open('/posts/delete/'.$post['idCutremur']); ?>
-<input type="submit" value="Delete" class="btn btn-danger">
+<input type="submit" value="Sterge" class="btn btn-danger">
 </form>
 
 

@@ -55,15 +55,15 @@ class Posts extends CI_Controller{
 
 			$data['title'] = 'Inscriere voluntari';
 
-			$this->form_validation->set_rules('idCutremur', 'idCutremur', 'required');
-			$this->form_validation->set_rules('idPersoana', 'idPersoana', 'required');
-			$this->form_validation->set_rules('nume', 'nume', 'required');
-			$this->form_validation->set_rules('prenume', 'prenume', 'required');
-			$this->form_validation->set_rules('about', 'about', 'required');
-			$this->form_validation->set_rules('studii', 'studii', 'required');
-			$this->form_validation->set_rules('varsta', 'varsta', 'required');
-			$this->form_validation->set_rules('taraOrigine', 'taraOrigine', 'required');
-			$this->form_validation->set_rules('nrTelefon', 'nrTelefon', 'required');
+			$this->form_validation->set_rules('idCutremur', 'Oras', 'required');
+			$this->form_validation->set_rules('idPersoana', 'Numar Voluntar', 'required');
+			$this->form_validation->set_rules('nume', 'Nume', 'required');
+			$this->form_validation->set_rules('prenume', 'Prenume', 'required');
+			$this->form_validation->set_rules('about', 'Descriere', 'required');
+			$this->form_validation->set_rules('studii', 'Ocupatia', 'required');
+			$this->form_validation->set_rules('varsta', 'Varsta', 'required');
+			$this->form_validation->set_rules('taraOrigine', 'Tara de origine', 'required');
+			$this->form_validation->set_rules('nrTelefon', 'Numar de telefon', 'required');
 			
 			if($this->form_validation->run() == FAlSE){
 
@@ -75,8 +75,8 @@ class Posts extends CI_Controller{
 			else {
 				$this->post_model->create_post();
 
-				$this->session->set_flashdata('post_created', 'Ai creat cutremur');
-				redirect('posts');
+				$this->session->set_flashdata('post_created', 'Felicitari! Te-ai inscris cu succes!');
+				redirect('posts/create');
 			}
 		}
 	}
@@ -89,7 +89,7 @@ class Posts extends CI_Controller{
 		else {
 			$this->post_model->delete_post($IDCUTREMUR);
 
-			$this->session->set_flashdata('post_deleted', 'Ai sters');
+			$this->session->set_flashdata('post_deleted', 'Ai sters cu succes datele!');
 
 			redirect('posts');
 		}
@@ -108,7 +108,7 @@ class Posts extends CI_Controller{
 				show_404();
 			}
 
-			$data['title'] = 'Edit post';
+			$data['title'] = 'Modifica datele cutremurului';
 
 			$this->load->view('templates/header');
 			$this->load->view('posts/edit', $data);
@@ -125,7 +125,7 @@ class Posts extends CI_Controller{
 		else {
 			$this->post_model->update_post();
 
-			$this->session->set_flashdata('post_updated', 'Ai updatat');
+			$this->session->set_flashdata('post_updated', 'Ai modificat cu succes!');
 
 			redirect('posts');
 		}
