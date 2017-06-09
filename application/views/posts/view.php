@@ -40,16 +40,31 @@
       google.visualization.events.addListener(chart, 'ready', function () {
         chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
         console.log(chart_div.innerHTML);
-        document.getElementById('png').outerHTML = '<a href="' + chart.getImageURI() + '">Vizualizati diagrama</a>';
+        document.getElementById('png').outerHTML = '<a style="float: right;margin-top : -30px" href="' + chart.getImageURI() + '">Vizualizati diagrama</a>';
       });
 
       chart.draw(data, options);
     }
   </script>
-  
+<hr>
+<a class="btn btn-default" style="float: right" href="edit/<?php echo $post['oras']; ?>">Modifica</a>
+<?php echo form_open('/posts/delete/'.$post['idCutremur']); ?>
+<input type="submit" style="float: right" value="Sterge" class="btn btn-danger">
+</hr>
+
+    <div class="posted-at">
+    La data de: <?php echo $post['date'];
+    ?>
+  </div>
+
+  <br>
+  <div class="post-body"> Cu magnitudinea de: 
+    <?php echo $post['magnitudine']; ?>
+  </div>
+  </br>
   
   <div id="png"></div>
-  <div id="piechart_3d" style="width: 900px; height: 500px;" ></div>
+  <div id="piechart_3d" style="float: right; display:inline; width: 49%; height: 500px;" ></div>
   <?php $link = "SELECT link FROM tw.maps WHERE idCutremur = '".$post['idCutremur']."' ";
   $maps = $this->db->query($link);
   $nrmaps = $maps->num_rows();
@@ -60,28 +75,13 @@
       $linkmaps=$row->link;
     }
     ?>
-    <iframe src="<?php echo $linkmaps; ?>" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="<?php echo $linkmaps; ?>" width="400" height="350" frameborder="0" style="border:0; top: 200px; " allowfullscreen></iframe>
     <?PHP
   }
   ?>
   
-
-
-  <div class="posted-at">
-    La data de: <?php echo $post['date'];
-    ?>
-  </div>
-
-  <br>
-  <div class="post-body"> Cu magnitudinea de: 
-    <?php echo $post['magnitudine']; ?>
-  </div>
 </div>
 
-<hr>
-<a class="btn btn-default" href="edit/<?php echo $post['oras']; ?>">Modifica</a>
-<?php echo form_open('/posts/delete/'.$post['idCutremur']); ?>
-<input type="submit" value="Sterge" class="btn btn-danger">
 </form>
 
 
