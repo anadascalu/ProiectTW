@@ -1,5 +1,5 @@
 <head>
-  <link rel = "stylesheet"  href = "http://localhost/TW/css/inscrieri.css" type = "text/css" >
+  <link rel = "stylesheet"  href = "<?php echo base_url(); ?>/css/inscrieri.css" type = "text/css" >
 
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -23,8 +23,6 @@
     <h1>Inscrie-te ca voluntar in orasul tau. Multumim, echipa NEDa! <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i></h1>
 
     <div class="contentform">
-      <div id="sendmessage"> Ai fost inscris cu succes. Va multumim! </div>
-
 
       <div class="leftcontact">
         <div class="form-group">

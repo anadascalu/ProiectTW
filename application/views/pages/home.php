@@ -43,90 +43,90 @@
  	<div class="container-fluid">
  		<div class="row no-gutter popup-gallery">
  			<div class="col-lg-4 col-sm-6">
- 				<a href="img/portfolio/fullsize/1.jpg" class="portfolio-box" >
- 					<img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+ 				<a href="img/Kath_c.jpg" class="portfolio-box" >
+ 					<img src="img/Kath_n.jpg" class="img-responsive" alt="">
  					<div class="portfolio-box-caption">
  						<div class="portfolio-box-caption-content">
  							<div class="project-category text-faded">
- 								Cutremur
+ 								Kathmandu
  							</div>
  							<div class="project-name">
- 								Informatii despre cutremur
+ 								Inainte & Dupa
  							</div>
  						</div>
  					</div>
  				</a>
  			</div>
  			<div class="col-lg-4 col-sm-6">
- 				<a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
- 					<img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+ 				<a href="img/Nag_c.jpg" class="portfolio-box">
+ 					<img src="img/Nag_n.jpg" class="img-responsive" alt="">
  					<div class="portfolio-box-caption">
  						<div class="portfolio-box-caption-content">
  							<div class="project-category text-faded">
- 								Cutremur
+ 								Nagarkot
  							</div>
  							<div class="project-name">
- 								Informatii despre cutremur
+ 								Inainte & Dupa
  							</div>
  						</div>
  					</div>
  				</a>
  			</div>
  			<div class="col-lg-4 col-sm-6">
- 				<a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
- 					<img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+ 				<a href="img/Sag_c.jpg" class="portfolio-box">
+ 					<img src="img/Sag_n.jpg" class="img-responsive" alt="">
  					<div class="portfolio-box-caption">
  						<div class="portfolio-box-caption-content">
  							<div class="project-category text-faded">
- 								Cutremur
+ 								Sagarmatha
  							</div>
  							<div class="project-name">
- 								Informatii despre cutremur
+ 								Inainte & Dupa
  							</div>
  						</div>
  					</div>
  				</a>
  			</div>
  			<div class="col-lg-4 col-sm-6">
- 				<a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
- 					<img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+ 				<a href="img/It_c.jpg" class="portfolio-box">
+ 					<img src="img/It_n.jpg" class="img-responsive" alt="">
  					<div class="portfolio-box-caption">
  						<div class="portfolio-box-caption-content">
  							<div class="project-category text-faded">
- 								Cutremur
+ 								Itahari
  							</div>
  							<div class="project-name">
- 								Informatii despre cutremur
+ 								Inainte & Dupa
  							</div>
  						</div>
  					</div>
  				</a>
  			</div>
  			<div class="col-lg-4 col-sm-6">
- 				<a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
- 					<img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+ 				<a href="img/Pit_c.jpg" class="portfolio-box">
+ 					<img src="img/Pit_n.jpg" class="img-responsive" alt="">
  					<div class="portfolio-box-caption">
  						<div class="portfolio-box-caption-content">
  							<div class="project-category text-faded">
- 								Cutremur
+ 								Pithoragarh
  							</div>
  							<div class="project-name">
- 								Informatii despre cutremur
+ 								Inainte & Dupa
  							</div>
  						</div>
  					</div>
  				</a>
  			</div>
  			<div class="col-lg-4 col-sm-6">
- 				<a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
- 					<img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+ 				<a href="img/Kot_c.jpg" class="portfolio-box">
+ 					<img src="img/Kot_n.jpg" class="img-responsive" alt="">
  					<div class="portfolio-box-caption">
  						<div class="portfolio-box-caption-content">
  							<div class="project-category text-faded">
- 								Cutremur
+ 								Kothari
  							</div>
  							<div class="project-name">
- 								Informatii despre cutremur
+ 								Inainte & Dupa
  							</div>
  						</div>
  					</div>
