@@ -46,13 +46,16 @@ class Post_model extends CI_Model{
 
 	public function update_post(){
 
-		$slug = url_title($this->input->post('idCutremur'));
+		$slug = url_title($this->input->post('oras'));
+
+		$this->db->select('idCutremur');
+		$query = $this->db->get_where('oras', $slug);
 
 		$data = array(
-		              'idCutremur' => $slug,	
+		              'idCutremur' => $query,	
 		              'magnitudine' => $this->input->post('magnitudine')
 		              );
-		$this->db->where('idCutremur', $this->input->post('idCutremur'));
+		$this->db->where('idCutremur', $query);
 		return $this->db->update('cutremur', $data);
 	}
 
