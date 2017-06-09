@@ -48,12 +48,10 @@ class Post_model extends CI_Model{
 
 		$slug = url_title($this->input->post('oras'));
 
-		$this->db->select('idCutremur');
-		$query = $this->db->get_where('oras', $slug);
-
 		$data = array(
-		              'idCutremur' => $query,	
-		              'magnitudine' => $this->input->post('magnitudine')
+		              'oras' => $slug,	
+		              'magnitudine' => $this->input->post('magnitudine'),
+		              'durataSecunde' => $this->input->post('durataSecunde')
 		              );
 		$this->db->where('idCutremur', $query);
 		return $this->db->update('cutremur', $data);

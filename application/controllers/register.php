@@ -29,7 +29,7 @@ class register extends CI_Controller
                 $this->register_model->register($enc_password);
 
                 //set message
-                $this->session->set_flashdata('user_registered', 'Sunteti inregistrat');
+                $this->session->set_flashdata('user_registered', 'V-ati inregistrat cu succes!');
 
                 redirect('login/login');
 
