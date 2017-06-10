@@ -28,11 +28,11 @@ class Post_model extends CI_Model{
 		              'idPersoana' => $this->input->post('idPersoana'),	
 		              'nume' => $this->input->post('nume'),	
 		              'prenume' => $this->input->post('prenume'),
-		               'about' => $this->input->post('about'),
-		               'studii' => $this->input->post('studii'),
-		               'varsta' => $this->input->post('varsta'),
-		               'taraOrigine' => $this->input->post('taraOrigine'),
-		               'nrTelefon' => $this->input->post('nrTelefon'),
+		              'about' => $this->input->post('about'),
+		              'studii' => $this->input->post('studii'),
+		              'varsta' => $this->input->post('varsta'),
+		              'taraOrigine' => $this->input->post('taraOrigine'),
+		              'nrTelefon' => $this->input->post('nrTelefon'),
 		              );
 
 		return $this->db->insert('voluntari', $data);
@@ -48,12 +48,18 @@ class Post_model extends CI_Model{
 
 		$slug = url_title($this->input->post('oras'));
 
+		$this->db->select('idCutremur');
+		$this->db->where('oras', $slug);
+		$query = $this->db->get('cutremur');
+
 		$data = array(
+		              'idCutremur' => $this->input->post('idCutremur'),
 		              'oras' => $slug,	
 		              'magnitudine' => $this->input->post('magnitudine'),
 		              'durataSecunde' => $this->input->post('durataSecunde')
 		              );
-		$this->db->where('idCutremur', $query);
+		$id = $this->input->post('idCutremur');
+		$this->db->where('idCutremur', $id );
 		return $this->db->update('cutremur', $data);
 	}
 
