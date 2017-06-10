@@ -26,9 +26,13 @@
 
       <div class="middlecontact">
         <input type="hidden" name="oras" value="<?php echo $post['oras']; ?>">
+        <div class="form-group">
+    <label>Id</label>
+    <input type="text" class="form-control" name="idCutremur" placeholder="Id" value="<?php echo $post['idCutremur']; ?>">
+  </div>
   <div class="form-group">
     <label>Oras</label>
-    <input type="text" class="form-control" name="idCutremur" placeholder="Add Title" value="<?php echo $post['oras']; ?>">
+    <input type="text" class="form-control" name="oras" placeholder="Oras" value="<?php echo $post['oras']; ?>">
   </div>
   <div class="form-group">
     <label>Magnitudine</label>
